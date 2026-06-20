@@ -3,43 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>News & Announcements — St. Mary Magdalene's High School</title>
-<meta name="description" content="Sports results, academic achievements, and official announcements from St. Mary Magdalene's High School, Nyanga.">
+<title>St. Mary Magdalene's High School — Nyanga</title>
+<meta name="description" content="St. Mary Magdalene's High School, Nyanga — Anglican co-educational boarding school. 100% A-Level pass rate, 2025. Est. 1948.">
 <link rel="icon" type="image/jpeg" href="images/crest.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --brick:#B4502F;--brick-deep:#8A3A21;--ink:#1A2333;--ink-soft:#5B6373;
-  --paper:#F7F3EC;--paper-deep:#EFE8DB;--white:#FFFFFF;--sky:#5C8FB0;--sky-deep:#3D6B89;
-  --moss:#5C7A52;--crimson:#A8333E;--line:rgba(26,35,51,0.12);
-  --display:'Fraunces', Georgia, serif;--sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --brick:#B4502F;
+  --brick-deep:#8A3A21;
+  --ink:#1A2333;
+  --ink-soft:#5B6373;
+  --paper:#F7F3EC;
+  --paper-deep:#EFE8DB;
+  --white:#FFFFFF;
+  --sky:#5C8FB0;
+  --sky-deep:#3D6B89;
+  --moss:#5C7A52;
+  --crimson:#A8333E;
+  --line:rgba(26,35,51,0.12);
+
+  --display:'Fraunces', Georgia, serif;
+  --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.5;}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.5;overflow-x:hidden;}
 img{display:block;max-width:100%;height:auto;}
 a{color:inherit;text-decoration:none;}
 ul{list-style:none;}
 .container{max-width:1320px;margin:0 auto;padding:0 32px;}
 @media (max-width:640px){.container{padding:0 20px;}}
+
+::selection{background:var(--brick);color:#fff;}
+
+@media (prefers-reduced-motion: reduce){*{animation-duration:0.01ms !important;transition-duration:0.01ms !important;}}
+
 a:focus-visible, button:focus-visible{outline:2px solid var(--brick);outline-offset:3px;}
 
-.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(247,243,236,0.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+/* ============ NAV ============ */
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(247,243,236,0.88);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
 .nav-inner{max-width:1320px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;}
 .brand{display:flex;align-items:center;gap:13px;}
 .brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;}
 .brand-text{font-family:var(--display);font-weight:700;font-size:17px;color:var(--ink);letter-spacing:-0.2px;}
 .nav-links{display:flex;gap:2px;align-items:center;}
-.nav-links a{font-size:14.5px;font-weight:600;padding:11px 18px;color:var(--ink-soft);position:relative;transition:color 0.2s ease;}
+.nav-links a{
+  font-size:14.5px;font-weight:600;padding:11px 18px;color:var(--ink-soft);
+  position:relative;transition:color 0.2s ease;
+}
 .nav-links a:hover, .nav-links a.active{color:var(--ink);}
-.nav-links a.active::after{content:'';position:absolute;left:18px;right:18px;bottom:6px;height:2px;background:var(--brick);}
-.nav-cta{background:var(--ink);color:var(--paper) !important;padding:11px 22px !important;border-radius:100px;font-weight:700 !important;margin-left:8px;}
+.nav-links a.active::after{
+  content:'';position:absolute;left:18px;right:18px;bottom:6px;height:2px;background:var(--brick);
+}
+.nav-cta{
+  background:var(--ink);color:var(--paper) !important;padding:11px 22px !important;
+  border-radius:100px;font-weight:700 !important;margin-left:8px;
+}
 .nav-cta:hover{background:var(--brick) !important;}
 .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px;}
 .nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;}
 @media (max-width:900px){
-  .nav-links{position:fixed;top:73px;left:0;right:0;background:var(--paper);flex-direction:column;align-items:stretch;padding:10px 20px 24px;border-bottom:1px solid var(--line);transform:translateY(-110%);opacity:0;transition:all 0.3s ease;pointer-events:none;}
+  .nav-links{
+    position:fixed;top:73px;left:0;right:0;background:var(--paper);
+    flex-direction:column;align-items:stretch;padding:10px 20px 24px;
+    border-bottom:1px solid var(--line);
+    transform:translateY(-110%);opacity:0;transition:all 0.3s ease;pointer-events:none;
+  }
   .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto;}
   .nav-links a{padding:16px 4px;border-bottom:1px solid var(--line);}
   .nav-links a.active::after{display:none;}
@@ -47,59 +81,225 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--brick);outline-off
   .nav-toggle{display:block;}
 }
 
-.page-hero{padding:160px 0 70px;}
-.ph-kicker{display:flex;align-items:center;gap:10px;margin-bottom:24px;}
-.ph-kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--brick);}
-.ph-kicker span{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--brick-deep);}
-.page-hero h1{font-family:var(--display);font-weight:700;font-size:clamp(38px,6vw,64px);line-height:1.02;letter-spacing:-1.5px;max-width:780px;}
-.page-hero h1 em{font-style:italic;font-weight:500;color:var(--brick);}
-.page-hero p{font-size:18px;color:var(--ink-soft);max-width:560px;margin-top:24px;}
-.breadcrumb{font-size:13px;color:var(--ink-soft);margin-bottom:18px;}
-.breadcrumb a:hover{color:var(--brick);}
+/* ============ HERO ============ */
+.hero{position:relative;padding:128px 0 0;overflow:hidden;}
+.hero-grid{
+  display:grid;grid-template-columns:1.05fr 0.95fr;gap:0;align-items:stretch;
+  min-height:84vh;
+}
+.hero-text{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:64px 64px 80px 0;
+}
+.hero-kicker{
+  display:flex;align-items:center;gap:10px;margin-bottom:28px;
+}
+.hero-kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--brick);}
+.hero-kicker span{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--brick-deep);}
+.hero h1{
+  font-family:var(--display);font-weight:700;color:var(--ink);
+  font-size:clamp(40px, 6vw, 76px);line-height:0.98;letter-spacing:-1.5px;
+}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--brick);}
+.hero-sub{font-size:18px;color:var(--ink-soft);max-width:480px;margin-top:28px;line-height:1.6;}
+.hero-cta{display:flex;gap:14px;margin-top:42px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);
+  padding:16px 30px;font-weight:700;font-size:15px;border-radius:100px;
+  border:1.5px solid transparent;transition:all 0.25s cubic-bezier(.2,.8,.2,1);cursor:pointer;
+}
+.btn-solid{background:var(--ink);color:var(--paper);}
+.btn-solid:hover{background:var(--brick);transform:translateY(-2px);}
+.btn-line{border-color:var(--ink);color:var(--ink);}
+.btn-line:hover{background:var(--ink);color:var(--paper);}
 
-section{padding:0 0 110px;}
+.hero-stats{display:flex;gap:36px;margin-top:56px;flex-wrap:wrap;}
+.hstat .n{font-family:var(--display);font-size:34px;font-weight:700;color:var(--ink);line-height:1;}
+.hstat .l{font-size:12.5px;color:var(--ink-soft);margin-top:6px;font-weight:600;}
 
-.controls-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;margin-bottom:48px;}
-.view-toggle{display:inline-flex;background:var(--white);border:1px solid var(--line);border-radius:100px;padding:4px;}
-.view-toggle button{padding:10px 24px;border:0;background:none;font-family:var(--sans);font-weight:700;font-size:14px;color:var(--ink-soft);border-radius:100px;cursor:pointer;transition:all 0.2s ease;}
-.view-toggle button.active{background:var(--ink);color:#fff;}
-.cat-filter{display:flex;gap:8px;flex-wrap:wrap;}
-.cat-btn{padding:9px 20px;border:1.5px solid var(--line);background:var(--white);border-radius:100px;font-size:13px;font-weight:700;color:var(--ink-soft);cursor:pointer;transition:all 0.2s ease;}
-.cat-btn:hover{border-color:var(--ink);}
-.cat-btn.active{background:var(--ink);border-color:var(--ink);color:#fff;}
+.hero-img-wrap{position:relative;overflow:hidden;}
 
-.feed-grid{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);}
-.news-card{background:var(--white);padding:32px 36px;display:flex;gap:28px;align-items:flex-start;transition:background 0.2s ease;}
-.news-card:hover{background:var(--paper-deep);}
-.news-card.pinned{background:linear-gradient(90deg, #FBE9DD 0%, var(--white) 18%);}
-.news-date{flex-shrink:0;width:70px;text-align:center;}
-.news-date .day{font-family:var(--display);font-size:32px;font-weight:700;color:var(--ink);line-height:1;}
-.news-date .mon{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--ink-soft);margin-top:4px;font-weight:600;}
-.news-content{flex:1;}
-.news-tags{display:flex;gap:8px;align-items:center;margin-bottom:10px;}
-.cat-badge{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:5px 13px;border-radius:100px;color:#fff;}
-.cat-badge.sports{background:var(--moss);}
-.cat-badge.achievement{background:var(--brick);}
-.cat-badge.announcement{background:var(--ink);}
-.cat-badge.event{background:var(--sky-deep);}
-.pin-badge{font-size:11px;color:var(--brick-deep);font-weight:700;}
-.news-content h3{font-family:var(--display);font-size:23px;color:var(--ink);margin-bottom:10px;font-weight:600;}
-.news-content p{font-size:15.5px;color:var(--ink-soft);}
+/* CAROUSEL */
+.hero-carousel{position:relative;width:100%;height:100%;min-height:560px;overflow:hidden;}
+.hc-slide{
+  position:absolute;inset:0;opacity:0;
+  animation:hcFade 30s infinite;
+}
+.hc-slide img{
+  width:100%;height:100%;object-fit:cover;
+  animation:hcZoom 30s infinite;
+  transform-origin:center center;
+}
+.hc-slide:nth-child(1){animation-delay:0s;}
+.hc-slide:nth-child(2){animation-delay:6s;}
+.hc-slide:nth-child(3){animation-delay:12s;}
+.hc-slide:nth-child(4){animation-delay:18s;}
+.hc-slide:nth-child(5){animation-delay:24s;}
+.hc-slide:nth-child(1) img{animation-delay:0s;}
+.hc-slide:nth-child(2) img{animation-delay:6s;}
+.hc-slide:nth-child(3) img{animation-delay:12s;}
+.hc-slide:nth-child(4) img{animation-delay:18s;}
+.hc-slide:nth-child(5) img{animation-delay:24s;}
 
-.table-view{display:none;}
-.news-table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--line);}
-.news-table th{text-align:left;padding:16px 20px;background:var(--ink);color:#fff;font-size:12.5px;text-transform:uppercase;letter-spacing:1px;font-weight:700;}
-.news-table td{padding:18px 20px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink);}
-.news-table tr:last-child td{border-bottom:none;}
-.news-table tr:hover{background:var(--paper-deep);}
-.news-table .t-cat{font-size:11px;font-weight:700;text-transform:uppercase;padding:4px 11px;border-radius:100px;color:#fff;}
-@media (max-width:760px){
-  .news-table{font-size:13px;}
-  .news-table th:nth-child(3),.news-table td:nth-child(3){display:none;}
-  .news-card{flex-direction:column;gap:10px;padding:24px 24px;}
-  section{padding:0 0 72px;}
+@keyframes hcFade{
+  0%{opacity:0;}
+  2%{opacity:1;}
+  18%{opacity:1;}
+  22%{opacity:0;}
+  100%{opacity:0;}
+}
+@keyframes hcZoom{
+  0%{transform:scale(1);}
+  100%{transform:scale(1.12);}
 }
 
+.hc-vignette{
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(180deg, rgba(26,35,51,0.08) 0%, rgba(26,35,51,0.02) 30%, rgba(26,35,51,0.35) 100%);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hc-slide, .hc-slide img{animation:none !important;}
+  .hc-slide:nth-child(1){opacity:1;}
+}
+.hero-img-tag{
+  position:absolute;left:24px;top:24px;background:var(--paper);padding:12px 18px;
+  font-size:12.5px;font-weight:700;color:var(--ink);border-radius:4px;
+  display:flex;align-items:center;gap:8px;z-index:6;
+}
+.hero-img-tag .sq{width:8px;height:8px;background:var(--brick);border-radius:50%;}
+
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;min-height:auto;}
+  .hero-text{padding:48px 0 56px;}
+  .hero-carousel{min-height:380px;}
+}
+
+/* ============ MARQUEE STRIP ============ */
+.marquee-strip{
+  background:var(--ink);color:var(--paper);padding:18px 0;overflow:hidden;white-space:nowrap;
+  border-top:1px solid var(--line);
+}
+.marquee-track{display:inline-block;animation:scroll 32s linear infinite;}
+.marquee-track span{
+  font-family:var(--display);font-style:italic;font-size:17px;margin:0 36px;
+  color:var(--paper);opacity:0.92;
+}
+.marquee-track span b{font-style:normal;color:var(--brick);font-weight:700;}
+@keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* ============ SECTION SHARED ============ */
+section{padding:120px 0;}
+.section-tag{
+  font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--brick-deep);margin-bottom:18px;display:block;
+}
+h2.h-title{
+  font-family:var(--display);font-weight:700;color:var(--ink);
+  font-size:clamp(32px,4.5vw,52px);line-height:1.05;letter-spacing:-1px;
+}
+
+/* ============ RESULTS BAND ============ */
+.results{background:var(--ink);color:var(--paper);}
+.results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(247,243,236,0.12);margin-top:64px;}
+.result-card{background:var(--ink);padding:8px 36px 36px;}
+.result-card .big{font-family:var(--display);font-size:clamp(46px,6vw,68px);font-weight:700;color:var(--paper);line-height:1;}
+.result-card .big .pct{font-size:0.5em;font-weight:500;opacity:0.7;}
+.result-card .lbl{font-size:14px;color:rgba(247,243,236,0.65);margin-top:14px;font-weight:600;}
+.results .h-title{color:var(--paper);}
+.results-note{color:rgba(247,243,236,0.55);font-size:14.5px;margin-top:24px;max-width:560px;}
+@media (max-width:900px){.results-grid{grid-template-columns:repeat(2,1fr);}}
+
+/* ============ PILLARS — asymmetric ============ */
+.pillars-layout{display:grid;grid-template-columns:0.85fr 1.15fr;gap:80px;align-items:start;}
+.pillars-list{display:flex;flex-direction:column;}
+.pillar-row{
+  padding:36px 0;border-bottom:1px solid var(--line);display:grid;
+  grid-template-columns:64px 1fr;gap:24px;
+}
+.pillar-row:first-child{padding-top:0;}
+.pillar-row .pn{font-family:var(--display);font-size:20px;font-weight:600;color:var(--brick);}
+.pillar-row h3{font-family:var(--display);font-size:24px;font-weight:600;color:var(--ink);margin-bottom:10px;}
+.pillar-row p{color:var(--ink-soft);font-size:15.5px;line-height:1.6;}
+.pillars-img{position:sticky;top:120px;}
+.pillars-img img{border-radius:6px;}
+@media (max-width:900px){
+  .pillars-layout{grid-template-columns:1fr;gap:40px;}
+  .pillars-img{position:static;}
+}
+
+/* ============ SUBJECTS BAND ============ */
+.subjects{background:var(--paper-deep);}
+.subj-tags{display:flex;flex-wrap:wrap;gap:12px;margin-top:48px;}
+.subj-tag{
+  padding:14px 24px;background:var(--white);border:1.5px solid var(--line);border-radius:100px;
+  font-weight:600;font-size:15px;color:var(--ink);transition:all 0.2s ease;
+}
+.subj-tag:hover{border-color:var(--brick);background:var(--brick);color:#fff;}
+.subj-tag.featured{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+
+/* ============ GALLERY ============ */
+.gallery-masonry{
+  display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:auto auto;gap:18px;margin-top:56px;
+}
+.gallery-masonry .g-main{grid-row:span 2;}
+.gallery-masonry figure{
+  position:relative;overflow:hidden;border-radius:6px;background:var(--ink);height:100%;
+}
+.gallery-masonry img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s cubic-bezier(.2,.8,.2,1);}
+.gallery-masonry figure:hover img{transform:scale(1.05);}
+
+/* VIDEO GALLERY ITEM */
+.g-video{cursor:pointer;}
+.g-video video{width:100%;height:100%;object-fit:cover;display:block;}
+.play-btn{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3;
+  width:64px;height:64px;border-radius:50%;background:rgba(26,35,51,0.55);
+  display:flex;align-items:center;justify-content:center;
+  transition:all 0.25s ease;backdrop-filter:blur(2px);
+}
+.play-btn span{color:#fff;font-size:20px;margin-left:3px;}
+.g-video:hover .play-btn{background:var(--brick);transform:translate(-50%,-50%) scale(1.1);}
+.g-video.playing .play-btn{display:none;}
+.vid-tag{
+  background:var(--brick);color:#fff;font-size:10px;font-weight:800;letter-spacing:1px;
+  padding:3px 8px;border-radius:3px;margin-left:8px;vertical-align:middle;
+}
+.gallery-masonry figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:22px 20px 18px;
+  background:linear-gradient(180deg, transparent, rgba(26,35,51,0.92));
+  color:#fff;font-size:14px;font-weight:600;
+}
+@media (max-width:900px){
+  .gallery-masonry{grid-template-columns:1fr 1fr;}
+  .gallery-masonry .g-main{grid-row:span 1;grid-column:span 2;}
+}
+@media (max-width:600px){
+  .gallery-masonry{grid-template-columns:1fr;}
+  .gallery-masonry .g-main{grid-column:span 1;}
+}
+
+/* ============ QUICKLINKS ============ */
+.quicklinks{background:var(--brick);color:#fff;}
+.ql-row{
+  display:grid;grid-template-columns:repeat(3,1fr);
+}
+.ql-item{
+  padding:48px 8px;border-right:1px solid rgba(255,255,255,0.2);text-align:left;
+  display:block;transition:background 0.25s ease;
+}
+.ql-item:last-child{border-right:none;}
+.ql-item:hover{background:rgba(0,0,0,0.1);}
+.ql-item .ql-lbl{font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;opacity:0.8;}
+.ql-item .ql-name{font-family:var(--display);font-size:26px;font-weight:600;margin-top:10px;}
+.ql-item .ql-arrow{margin-top:18px;font-size:22px;display:inline-block;transition:transform 0.25s ease;}
+.ql-item:hover .ql-arrow{transform:translateX(6px);}
+@media (max-width:760px){
+  .ql-row{grid-template-columns:1fr;}
+  .ql-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.2);padding:36px 0;}
+}
+
+/* ============ FOOTER ============ */
 footer{background:var(--ink);color:rgba(247,243,236,0.7);padding:80px 0 32px;}
 .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:64px;}
 .footer-brand-row{display:flex;align-items:center;gap:14px;margin-bottom:18px;}
@@ -107,126 +307,209 @@ footer{background:var(--ink);color:rgba(247,243,236,0.7);padding:80px 0 32px;}
 .footer-brand-row span{font-family:var(--display);font-size:20px;color:var(--paper);font-weight:700;}
 footer p{font-size:14.5px;line-height:1.7;max-width:280px;}
 .footer-col h5{color:var(--paper);font-size:12.5px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:20px;font-weight:700;}
-.footer-col a{display:block;font-size:14.5px;margin-bottom:12px;}
+.footer-col a{display:block;font-size:14.5px;margin-bottom:12px;transition:color 0.2s ease;}
 .footer-col a:hover{color:var(--paper);}
-.footer-bottom{border-top:1px solid rgba(247,243,236,0.12);padding-top:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;}
+.footer-bottom{
+  border-top:1px solid rgba(247,243,236,0.12);padding-top:28px;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;
+}
 @media (max-width:900px){.footer-top{grid-template-columns:1fr 1fr;}}
 @media (max-width:600px){.footer-top{grid-template-columns:1fr;}}
+
+@media (max-width:600px){section{padding:80px 0;}}
 </style>
 </head>
 <body>
 
 <nav class="navbar">
   <div class="nav-inner">
-    <a href="index.html" class="brand"><img src="images/crest.jpg" alt="St. Mary Magdalene's crest"><span class="brand-text">St. Mary Magdalene's</span></a>
+    <a href="index.html" class="brand">
+      <img src="images/crest.jpg" alt="St. Mary Magdalene's crest">
+      <span class="brand-text">St. Mary Magdalene's</span>
+    </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="teachers.html">Teachers</a></li>
-      <li><a href="news.html" class="active">News</a></li>
+      <li><a href="news.html">News</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="apply.html" class="nav-cta">Apply Now</a></li>
     </ul>
   </div>
 </nav>
 
-<header class="page-hero">
+<header class="hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a> / News</div>
-    <div class="ph-kicker"><span class="dot"></span><span>Stay Informed</span></div>
-    <h1>News & <em>announcements.</em></h1>
-    <p>Sports results, academic achievements, and official notices — staff-editable directly via the admin panel.</p>
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="hero-kicker"><span class="dot"></span><span>Nyanga, Manicaland · Est. 1948</span></div>
+        <h1>Faith, rigour,<br><em>and a 100%</em><br>A-Level pass rate.</h1>
+        <p class="hero-sub">An Anglican co-educational boarding school in the Eastern Highlands — where discipline and Christian character meet genuine academic results.</p>
+        <div class="hero-cta">
+          <a href="apply.html" class="btn btn-solid">Apply for Admission →</a>
+          <a href="about.html" class="btn btn-line">Our Story</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hstat"><div class="n">1948</div><div class="l">FOUNDED</div></div>
+          <div class="hstat"><div class="n">100%</div><div class="l">A-LEVEL PASS, 2025</div></div>
+          <div class="hstat"><div class="n">94%</div><div class="l">O-LEVEL PASS, 2025</div></div>
+        </div>
+      </div>
+      <div class="hero-img-wrap">
+        <div class="hero-carousel" id="heroCarousel">
+          <div class="hc-slide active"><img src="images/slide1_corridor.jpg" alt="Classroom block, Nyanga campus"></div>
+          <div class="hc-slide"><img src="images/slide2_buildings.jpg" alt="Boarding house quarters"></div>
+          <div class="hc-slide"><img src="images/slide3_grounds.jpg" alt="Campus grounds and school garden project"></div>
+          <div class="hc-slide"><img src="images/slide4_bus_close.jpg" alt="School bus bearing the St. Mary Magdalene's crest"></div>
+          <div class="hc-slide"><img src="images/slide5_bus_wide.jpg" alt="St. Mary Magdalene's High School transport fleet"></div>
+          <div class="hc-vignette"></div>
+        </div>
+        <div class="hero-img-tag"><span class="sq"></span>Nyanga Campus, 2026</div>
+      </div>
+    </div>
   </div>
 </header>
 
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>IN VERITATE LIBERTAS</span>
+    <span><b>·</b></span>
+    <span>ANGLICAN DIOCESE OF MANICALAND</span>
+    <span><b>·</b></span>
+    <span>SCIENCES — COMMERCIALS — ARTS</span>
+    <span><b>·</b></span>
+    <span>38TH IN MANICALAND, 2025</span>
+    <span><b>·</b></span>
+    <span>IN VERITATE LIBERTAS</span>
+    <span><b>·</b></span>
+    <span>ANGLICAN DIOCESE OF MANICALAND</span>
+    <span><b>·</b></span>
+    <span>SCIENCES — COMMERCIALS — ARTS</span>
+    <span><b>·</b></span>
+    <span>38TH IN MANICALAND, 2025</span>
+    <span><b>·</b></span>
+  </div>
+</div>
+
+<section class="results">
+  <div class="container">
+    <span class="section-tag" style="color:#E8A584;">Track Record</span>
+    <h2 class="h-title">Results that speak<br>for themselves.</h2>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="big">100<span class="pct">%</span></div>
+        <div class="lbl">A-Level pass rate, 2025</div>
+      </div>
+      <div class="result-card">
+        <div class="big">94<span class="pct">%</span></div>
+        <div class="lbl">O-Level pass rate, 2025</div>
+      </div>
+      <div class="result-card">
+        <div class="big">5</div>
+        <div class="lbl">Students scored 15 points at A-Level, 2025</div>
+      </div>
+      <div class="result-card">
+        <div class="big">38<span class="pct">th</span></div>
+        <div class="lbl">Ranking in Manicaland Province, 2025</div>
+      </div>
+    </div>
+    <p class="results-note">Source: 2025 ZIMSEC examination results. Figures to be reconfirmed with school administration before publication.</p>
+  </div>
+</section>
+
 <section>
   <div class="container">
-
-    <div class="controls-row">
-      <div class="view-toggle">
-        <button class="active" id="feedBtn">Feed View</button>
-        <button id="tableBtn">Table View</button>
+    <div class="pillars-layout">
+      <div>
+        <span class="section-tag">What Guides Us</span>
+        <h2 class="h-title" style="margin-bottom:8px;">Three things<br>we never compromise on.</h2>
+        <div class="pillars-list" style="margin-top:48px;">
+          <div class="pillar-row">
+            <div class="pn">01</div>
+            <div>
+              <h3>An Anglican foundation</h3>
+              <p>Under the Diocese of Manicaland, chapel life and pastoral care are woven into every term — not an add-on, but the spine of the school.</p>
+            </div>
+          </div>
+          <div class="pillar-row">
+            <div class="pn">02</div>
+            <div>
+              <h3>The ZIMSEC curriculum, taken seriously</h3>
+              <p>Sciences, Commercials, and Arts, taught by qualified staff, producing the kind of pass rates that put us 38th in Manicaland in 2025.</p>
+            </div>
+          </div>
+          <div class="pillar-row">
+            <div class="pn">03</div>
+            <div>
+              <h3>A real boarding community</h3>
+              <p>Boreholes, solar pumps, and a working farm project feed a dining hall that serves students from across Zimbabwe — discipline learned, not lectured.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="cat-filter">
-        <button class="cat-btn active" data-cat="all">All</button>
-        <button class="cat-btn" data-cat="sports">Sports</button>
-        <button class="cat-btn" data-cat="achievement">Achievements</button>
-        <button class="cat-btn" data-cat="announcement">Announcements</button>
-        <button class="cat-btn" data-cat="event">Events</button>
+      <div class="pillars-img">
+        <img src="images/buildings_tall.jpg" alt="Boarding house quarters at St. Mary Magdalene's">
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="feed-grid" id="feedView">
-      <div class="news-card pinned" data-cat="announcement">
-        <div class="news-date"><div class="day">12</div><div class="mon">Jun</div></div>
-        <div class="news-content">
-          <div class="news-tags"><span class="cat-badge announcement">Announcement</span><span class="pin-badge">📌 Pinned</span></div>
-          <h3>Third Term Opening Date Confirmed</h3>
-          <p>All boarders are required to report to their houses by 4:00 PM on the official opening day. Day scholars begin lessons the following morning.</p>
-        </div>
-      </div>
-
-      <div class="news-card" data-cat="achievement">
-        <div class="news-date"><div class="day">28</div><div class="mon">May</div></div>
-        <div class="news-content">
-          <div class="news-tags"><span class="cat-badge achievement">Achievement</span></div>
-          <h3>100% A-Level Pass Rate for 2025</h3>
-          <p>The school recorded a 100% A-Level pass rate and 94% at O-Level in the 2025 ZIMSEC examinations, with five students achieving 15 points — placing the school 38th in Manicaland Province.</p>
-        </div>
-      </div>
-
-      <div class="news-card" data-cat="sports">
-        <div class="news-date"><div class="day">21</div><div class="mon">May</div></div>
-        <div class="news-content">
-          <div class="news-tags"><span class="cat-badge sports">Sports Result</span></div>
-          <h3>Netball First Team Wins District Derby</h3>
-          <p>Our First Team netball side defeated a neighbouring district school 28–19, securing top position in the zonal standings.</p>
-        </div>
-      </div>
-
-      <div class="news-card" data-cat="sports">
-        <div class="news-date"><div class="day">14</div><div class="mon">May</div></div>
-        <div class="news-content">
-          <div class="news-tags"><span class="cat-badge sports">Sports Result</span></div>
-          <h3>Football First Team: 2–1 Victory Away</h3>
-          <p>A late goal secured a narrow but well-deserved win for the boys' First Team football side in their away fixture.</p>
-        </div>
-      </div>
-
-      <div class="news-card" data-cat="event">
-        <div class="news-date"><div class="day">02</div><div class="mon">May</div></div>
-        <div class="news-content">
-          <div class="news-tags"><span class="cat-badge event">Event</span></div>
-          <h3>Annual Founders' Day Service</h3>
-          <p>The school community gathered in the chapel to mark another year since the school's founding in 1948, with a special address from the Diocese of Manicaland.</p>
-        </div>
-      </div>
-
-      <div class="news-card" data-cat="announcement">
-        <div class="news-date"><div class="day">25</div><div class="mon">Apr</div></div>
-        <div class="news-content">
-          <div class="news-tags"><span class="cat-badge announcement">Announcement</span></div>
-          <h3>Term Fees Confirmed at $653</h3>
-          <p>Tuition for the current academic year is set at $653 per term, inclusive of levies. Parents are encouraged to make timely payments.</p>
-        </div>
-      </div>
+<section class="subjects">
+  <div class="container">
+    <span class="section-tag">Academic Programme</span>
+    <h2 class="h-title">A curriculum built<br>for real outcomes.</h2>
+    <div class="subj-tags">
+      <span class="subj-tag featured">Biology</span>
+      <span class="subj-tag featured">Chemistry</span>
+      <span class="subj-tag featured">Physics</span>
+      <span class="subj-tag">Combined Science</span>
+      <span class="subj-tag">Mathematics</span>
+      <span class="subj-tag">Computer Science</span>
+      <span class="subj-tag">Technical Graphics</span>
+      <span class="subj-tag">Textile Technology & Design</span>
+      <span class="subj-tag">Economics</span>
+      <span class="subj-tag">Business Studies</span>
+      <span class="subj-tag">Literature in English</span>
+      <span class="subj-tag">Divinity</span>
     </div>
+  </div>
+</section>
 
-    <div class="table-view" id="tableView">
-      <table class="news-table">
-        <thead><tr><th>Date</th><th>Category</th><th>Title</th><th>Summary</th></tr></thead>
-        <tbody>
-          <tr data-cat="announcement"><td>12 Jun 2026</td><td><span class="t-cat" style="background:var(--ink);">Announcement</span></td><td>Third Term Opening Date Confirmed</td><td>Boarders report by 4:00 PM on opening day.</td></tr>
-          <tr data-cat="achievement"><td>28 May 2026</td><td><span class="t-cat" style="background:var(--brick);">Achievement</span></td><td>100% A-Level Pass Rate for 2025</td><td>94% O-Level, 38th in Manicaland.</td></tr>
-          <tr data-cat="sports"><td>21 May 2026</td><td><span class="t-cat" style="background:var(--moss);">Sports</span></td><td>Netball First Team Wins District Derby</td><td>Won 28–19, top of zonal standings.</td></tr>
-          <tr data-cat="sports"><td>14 May 2026</td><td><span class="t-cat" style="background:var(--moss);">Sports</span></td><td>Football First Team: 2–1 Victory Away</td><td>Late goal secures away win.</td></tr>
-          <tr data-cat="event"><td>02 May 2026</td><td><span class="t-cat" style="background:var(--sky-deep);">Event</span></td><td>Annual Founders' Day Service</td><td>Chapel service marking 1948 founding.</td></tr>
-          <tr data-cat="announcement"><td>25 Apr 2026</td><td><span class="t-cat" style="background:var(--ink);">Announcement</span></td><td>Term Fees Confirmed at $653</td><td>Inclusive of levies, per term.</td></tr>
-        </tbody>
-      </table>
+<section class="gallery-section">
+  <div class="container">
+    <span class="section-tag">Around Campus</span>
+    <h2 class="h-title">Nyanga, as it actually looks.</h2>
+    <div class="gallery-masonry">
+      <figure class="g-main"><img src="images/hero_main.jpg" alt="Classroom block"><figcaption>Classroom Block & Walkway</figcaption></figure>
+      <figure><img src="images/buildings_square.jpg" alt="Boarding houses"><figcaption>Boarding Quarters</figcaption></figure>
+      <figure><img src="images/grounds_wide.jpg" alt="Campus grounds"><figcaption>Campus Grounds</figcaption></figure>
+      <figure class="g-video" style="grid-column:span 2;" onclick="playGalleryVideo(this)">
+        <img src="images/video_thumb_football.jpg" alt="U17 football team in match action">
+        <div class="play-btn"><span>▶</span></div>
+        <figcaption>U17 Football — Champions Again <span class="vid-tag">VIDEO</span></figcaption>
+      </figure>
     </div>
+  </div>
+</section>
 
+<section class="quicklinks" style="padding:0;">
+  <div class="ql-row">
+    <a href="teachers.html" class="ql-item">
+      <div class="ql-lbl">Directory</div>
+      <div class="ql-name">Our Teachers</div>
+      <div class="ql-arrow">→</div>
+    </a>
+    <a href="news.html" class="ql-item">
+      <div class="ql-lbl">Updates</div>
+      <div class="ql-name">Latest News</div>
+      <div class="ql-arrow">→</div>
+    </a>
+    <a href="apply.html" class="ql-item">
+      <div class="ql-lbl">Get in Touch</div>
+      <div class="ql-name">Admissions</div>
+      <div class="ql-arrow">→</div>
+    </a>
   </div>
 </section>
 
@@ -234,14 +517,35 @@ footer p{font-size:14.5px;line-height:1.7;max-width:280px;}
   <div class="container">
     <div class="footer-top">
       <div>
-        <div class="footer-brand-row"><img src="images/crest.jpg" alt="School Crest"><span>St. Mary Magdalene's</span></div>
+        <div class="footer-brand-row">
+          <img src="images/crest.jpg" alt="School Crest">
+          <span>St. Mary Magdalene's</span>
+        </div>
         <p>P.O. Box 2005, Nyanga, Manicaland, Zimbabwe. Anglican co-educational boarding school in the Diocese of Manicaland. Founded 1948.</p>
       </div>
-      <div class="footer-col"><h5>Explore</h5><a href="about.html">About Us</a><a href="teachers.html">Teachers</a><a href="news.html">News</a><a href="contact.html">Contact</a></div>
-      <div class="footer-col"><h5>Contact</h5><a href="tel:+263774422205">Principal: 0774 422 205</a><a href="tel:+263773538917">Head: 0773 538 917</a><a href="tel:+263298518">Office: +263 298 8 518</a></div>
-      <div class="footer-col"><h5>Motto</h5><p style="font-family:var(--display);font-style:italic;font-size:17px;color:rgba(247,243,236,0.85);">In Veritate Libertas</p><p style="font-size:13px;margin-top:6px;">"In Truth, Freedom"</p></div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <a href="about.html">About Us</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="tel:+263774422205">Principal: 0774 422 205</a>
+        <a href="tel:+263773538917">Head: 0773 538 917</a>
+        <a href="tel:+263298518">Office: +263 298 8 518</a>
+      </div>
+      <div class="footer-col">
+        <h5>Motto</h5>
+        <p style="font-family:var(--display);font-style:italic;font-size:17px;color:rgba(247,243,236,0.85);">In Veritate Libertas</p>
+        <p style="font-size:13px;margin-top:6px;">"In Truth, Freedom"</p>
+      </div>
     </div>
-    <div class="footer-bottom"><span>&copy; 2026 St. Mary Magdalene's High School, Nyanga.</span><span>Site by BFSENTAIN Technologies (Pvt) Ltd</span></div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 St. Mary Magdalene's High School, Nyanga.</span>
+      <span>Site by BFSENTAIN Technologies (Pvt) Ltd</span>
+    </div>
   </div>
 </footer>
 
@@ -251,31 +555,18 @@ const navLinks = document.getElementById('navLinks');
 navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
 document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-const feedBtn = document.getElementById('feedBtn');
-const tableBtn = document.getElementById('tableBtn');
-const feedView = document.getElementById('feedView');
-const tableView = document.getElementById('tableView');
-feedBtn.addEventListener('click', () => {
-  feedBtn.classList.add('active'); tableBtn.classList.remove('active');
-  feedView.style.display = 'flex'; tableView.style.display = 'none';
-});
-tableBtn.addEventListener('click', () => {
-  tableBtn.classList.add('active'); feedBtn.classList.remove('active');
-  tableView.style.display = 'block'; feedView.style.display = 'none';
-});
-
-const catBtns = document.querySelectorAll('.cat-btn');
-const newsCards = document.querySelectorAll('.news-card');
-const tableRows = document.querySelectorAll('.news-table tbody tr');
-catBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    catBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const cat = btn.getAttribute('data-cat');
-    newsCards.forEach(card => { card.style.display = (cat === 'all' || card.getAttribute('data-cat') === cat) ? '' : 'none'; });
-    tableRows.forEach(row => { row.style.display = (cat === 'all' || row.getAttribute('data-cat') === cat) ? '' : 'none'; });
-  });
-});
+function playGalleryVideo(figureEl){
+  if(figureEl.classList.contains('playing')) return;
+  figureEl.classList.add('playing');
+  const img = figureEl.querySelector('img');
+  const video = document.createElement('video');
+  video.src = 'video/u17_football_champions.mp4';
+  video.controls = true;
+  video.autoplay = true;
+  video.playsInline = true;
+  video.poster = img.getAttribute('src');
+  img.replaceWith(video);
+}
 </script>
 </body>
 </html>

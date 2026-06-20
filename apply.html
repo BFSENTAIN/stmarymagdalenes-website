@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply for Admission — St. Mary Magdalene's High School</title>
+<meta name="description" content="Apply for admission to St. Mary Magdalene's High School, Nyanga. Form One and Lower Six applications.">
+<link rel="icon" type="image/jpeg" href="images/crest.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brick:#B4502F;--brick-deep:#8A3A21;--ink:#1A2333;--ink-soft:#5B6373;
+  --paper:#F7F3EC;--paper-deep:#EFE8DB;--white:#FFFFFF;--sky:#5C8FB0;--sky-deep:#3D6B89;
+  --moss:#5C7A52;--crimson:#A8333E;--line:rgba(26,35,51,0.12);
+  --display:'Fraunces', Georgia, serif;--sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.5;}
+img{display:block;max-width:100%;height:auto;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+.container{max-width:1320px;margin:0 auto;padding:0 32px;}
+@media (max-width:640px){.container{padding:0 20px;}}
+input,textarea,select{font-family:var(--sans);}
+a:focus-visible, button:focus-visible{outline:2px solid var(--brick);outline-offset:3px;}
+
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(247,243,236,0.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.nav-inner{max-width:1320px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;}
+.brand{display:flex;align-items:center;gap:13px;}
+.brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;}
+.brand-text{font-family:var(--display);font-weight:700;font-size:17px;color:var(--ink);letter-spacing:-0.2px;}
+.nav-links{display:flex;gap:2px;align-items:center;}
+.nav-links a{font-size:14.5px;font-weight:600;padding:11px 18px;color:var(--ink-soft);position:relative;transition:color 0.2s ease;}
+.nav-links a:hover, .nav-links a.active{color:var(--ink);}
+.nav-links a.active::after{content:'';position:absolute;left:18px;right:18px;bottom:6px;height:2px;background:var(--brick);}
+.nav-cta{background:var(--ink);color:var(--paper) !important;padding:11px 22px !important;border-radius:100px;font-weight:700 !important;margin-left:8px;}
+.nav-cta:hover{background:var(--brick) !important;}
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px;}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;}
+@media (max-width:900px){
+  .nav-links{position:fixed;top:73px;left:0;right:0;background:var(--paper);flex-direction:column;align-items:stretch;padding:10px 20px 24px;border-bottom:1px solid var(--line);transform:translateY(-110%);opacity:0;transition:all 0.3s ease;pointer-events:none;}
+  .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto;}
+  .nav-links a{padding:16px 4px;border-bottom:1px solid var(--line);}
+  .nav-links a.active::after{display:none;}
+  .nav-cta{margin-left:0;margin-top:12px;text-align:center;}
+  .nav-toggle{display:block;}
+}
+
+.page-hero{padding:160px 0 60px;}
+.ph-kicker{display:flex;align-items:center;gap:10px;margin-bottom:24px;}
+.ph-kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--brick);}
+.ph-kicker span{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--brick-deep);}
+.page-hero h1{font-family:var(--display);font-weight:700;font-size:clamp(36px,5.5vw,58px);line-height:1.02;letter-spacing:-1.5px;max-width:780px;}
+.page-hero h1 em{font-style:italic;font-weight:500;color:var(--brick);}
+.page-hero p{font-size:17px;color:var(--ink-soft);max-width:560px;margin-top:22px;}
+.breadcrumb{font-size:13px;color:var(--ink-soft);margin-bottom:18px;}
+.breadcrumb a:hover{color:var(--brick);}
+
+section{padding:0 0 120px;}
+
+/* ====== WIZARD SHELL ====== */
+.wizard-shell{
+  max-width:760px;margin:0 auto;
+}
+
+/* progress */
+.progress-track{display:flex;align-items:flex-start;margin-bottom:56px;position:relative;}
+.progress-step{flex:1;text-align:center;position:relative;}
+.progress-step .ps-circle{
+  width:38px;height:38px;border-radius:50%;background:var(--white);border:2px solid var(--line);
+  display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;
+  font-size:15px;color:var(--ink-soft);margin:0 auto 10px;position:relative;z-index:2;
+  transition:all 0.3s ease;
+}
+.progress-step.active .ps-circle{background:var(--ink);border-color:var(--ink);color:#fff;}
+.progress-step.done .ps-circle{background:var(--brick);border-color:var(--brick);color:#fff;}
+.progress-step .ps-label{font-size:11.5px;font-weight:700;color:var(--ink-soft);text-transform:uppercase;letter-spacing:0.5px;}
+.progress-step.active .ps-label{color:var(--ink);}
+.progress-line{
+  position:absolute;top:19px;left:0;right:0;height:2px;background:var(--line);z-index:1;
+}
+.progress-line-fill{height:100%;background:var(--brick);width:0%;transition:width 0.4s ease;}
+
+/* card */
+.wiz-card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:44px 40px;}
+.wiz-step{display:none;}
+.wiz-step.active{display:block;animation:fadeIn 0.35s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.wiz-step h2{font-family:var(--display);font-size:26px;font-weight:700;color:var(--ink);margin-bottom:8px;}
+.wiz-step .wiz-sub{font-size:14.5px;color:var(--ink-soft);margin-bottom:32px;}
+
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.field{margin-bottom:22px;}
+.field label{display:block;font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:8px;}
+.field .hint{font-size:12px;color:var(--ink-soft);font-weight:400;margin-top:5px;}
+.field input,.field select,.field textarea{
+  width:100%;padding:13px 16px;border:1.5px solid var(--line);border-radius:6px;
+  font-size:15px;color:var(--ink);background:var(--paper);transition:border-color 0.2s ease;
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brick);background:var(--white);}
+.field textarea{resize:vertical;min-height:90px;}
+@media (max-width:600px){.field-row{grid-template-columns:1fr;}}
+
+/* entry type toggle */
+.entry-toggle{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:36px;}
+.entry-opt{
+  border:1.5px solid var(--line);border-radius:8px;padding:20px;cursor:pointer;
+  transition:all 0.2s ease;text-align:left;background:var(--paper);
+}
+.entry-opt input{display:none;}
+.entry-opt .eo-title{font-family:var(--display);font-weight:600;font-size:17px;color:var(--ink);}
+.entry-opt .eo-sub{font-size:12.5px;color:var(--ink-soft);margin-top:4px;}
+.entry-opt.selected{border-color:var(--brick);background:#FBE9DD;}
+@media (max-width:600px){.entry-toggle{grid-template-columns:1fr;}}
+
+/* document upload grid */
+.doc-grid{display:flex;flex-direction:column;gap:14px;}
+.doc-item{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  border:1.5px dashed var(--line);border-radius:8px;padding:18px 20px;
+  transition:all 0.2s ease;background:var(--paper);
+}
+.doc-item.required{border-color:rgba(180,80,47,0.35);}
+.doc-item.uploaded{border-style:solid;border-color:var(--moss);background:#F0F7EE;}
+.doc-info{display:flex;gap:14px;align-items:center;}
+.doc-icon{width:40px;height:40px;border-radius:8px;background:var(--paper-deep);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.doc-item.uploaded .doc-icon{background:var(--moss);color:#fff;}
+.doc-name{font-size:14.5px;font-weight:700;color:var(--ink);}
+.doc-name .req-tag{color:var(--brick);font-weight:700;margin-left:4px;}
+.doc-status{font-size:12.5px;color:var(--ink-soft);margin-top:2px;}
+.doc-item.uploaded .doc-status{color:#2D6A4F;font-weight:600;}
+.doc-upload-btn{
+  background:var(--white);border:1.5px solid var(--line);padding:9px 18px;border-radius:100px;
+  font-size:13px;font-weight:700;color:var(--ink);cursor:pointer;flex-shrink:0;transition:all 0.2s ease;
+}
+.doc-upload-btn:hover{border-color:var(--ink);}
+.doc-item.uploaded .doc-upload-btn{background:var(--moss);color:#fff;border-color:var(--moss);}
+.file-input{display:none;}
+
+/* review */
+.review-section{margin-bottom:28px;}
+.review-section h4{
+  font-size:12px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;color:var(--brick-deep);
+  margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--line);
+}
+.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;}
+.review-item .rl{font-size:11.5px;color:var(--ink-soft);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;}
+.review-item .rv{font-size:15px;color:var(--ink);margin-top:3px;font-weight:500;}
+@media (max-width:600px){.review-grid{grid-template-columns:1fr;}}
+
+.consent-row{display:flex;gap:12px;align-items:flex-start;margin-top:28px;padding:18px 20px;background:var(--paper);border-radius:8px;}
+.consent-row input{margin-top:3px;flex-shrink:0;}
+.consent-row label{font-size:13.5px;color:var(--ink-soft);line-height:1.5;}
+
+/* nav buttons */
+.wiz-nav{display:flex;justify-content:space-between;margin-top:40px;}
+.wiz-btn{
+  padding:14px 30px;font-weight:700;font-size:15px;border-radius:100px;cursor:pointer;
+  border:1.5px solid transparent;transition:all 0.2s ease;font-family:var(--sans);
+}
+.wiz-btn-next{background:var(--ink);color:#fff;}
+.wiz-btn-next:hover{background:var(--brick);}
+.wiz-btn-back{background:none;border-color:var(--line);color:var(--ink-soft);}
+.wiz-btn-back:hover{border-color:var(--ink);color:var(--ink);}
+.wiz-btn-submit{background:var(--brick);color:#fff;}
+.wiz-btn-submit:hover{background:var(--brick-deep);}
+.wiz-btn[disabled]{opacity:0.4;cursor:not-allowed;}
+
+/* confirmation screen */
+.confirm-screen{display:none;text-align:center;padding:60px 40px;}
+.confirm-screen.active{display:block;}
+.confirm-icon{
+  width:72px;height:72px;border-radius:50%;background:var(--moss);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 28px;
+}
+.confirm-screen h2{font-family:var(--display);font-size:30px;font-weight:700;margin-bottom:14px;}
+.confirm-screen p{color:var(--ink-soft);font-size:16px;max-width:440px;margin:0 auto 28px;}
+.confirm-ref{
+  font-family:var(--display);font-size:32px;font-weight:700;color:var(--brick);letter-spacing:2px;
+  background:var(--paper);display:inline-block;padding:16px 36px;border-radius:8px;margin-bottom:28px;
+}
+.confirm-note{font-size:13px;color:var(--ink-soft);max-width:480px;margin:0 auto;}
+
+.info-banner{
+  background:var(--sky);color:#fff;border-radius:8px;padding:20px 26px;margin-bottom:40px;
+  font-size:14px;line-height:1.6;
+}
+.info-banner strong{color:#fff;}
+
+footer{background:var(--ink);color:rgba(247,243,236,0.7);padding:80px 0 32px;}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:64px;}
+.footer-brand-row{display:flex;align-items:center;gap:14px;margin-bottom:18px;}
+.footer-brand-row img{width:46px;height:46px;border-radius:50%;object-fit:cover;}
+.footer-brand-row span{font-family:var(--display);font-size:20px;color:var(--paper);font-weight:700;}
+footer p{font-size:14.5px;line-height:1.7;max-width:280px;}
+.footer-col h5{color:var(--paper);font-size:12.5px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:20px;font-weight:700;}
+.footer-col a{display:block;font-size:14.5px;margin-bottom:12px;}
+.footer-col a:hover{color:var(--paper);}
+.footer-bottom{border-top:1px solid rgba(247,243,236,0.12);padding-top:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;}
+@media (max-width:900px){.footer-top{grid-template-columns:1fr 1fr;}}
+@media (max-width:600px){
+  .footer-top{grid-template-columns:1fr;}
+  .wiz-card{padding:30px 22px;}
+  section{padding:0 0 80px;}
+  .progress-step .ps-label{font-size:9.5px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><img src="images/crest.jpg" alt="St. Mary Magdalene's crest"><span class="brand-text">St. Mary Magdalene's</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="teachers.html">Teachers</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="apply.html" class="nav-cta">Apply Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Apply for Admission</div>
+    <div class="ph-kicker"><span class="dot"></span><span>Admissions</span></div>
+    <h1>Apply for <em>admission.</em></h1>
+    <p>A guided application for Form One and Lower Six entry. Have your documents ready — you'll be able to upload them in step three.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="wizard-shell">
+
+      <div class="info-banner">
+        <strong>Before you begin:</strong> Form One enrollment is processed via the Ministry of Education's EMAP platform after Grade 7 results are released. This form collects your application for school records and reserves your place pending EMAP confirmation. Lower Six applicants apply directly through this form.
+      </div>
+
+      <!-- PROGRESS -->
+      <div class="progress-track" id="progressTrack">
+        <div class="progress-line"><div class="progress-line-fill" id="progressFill"></div></div>
+        <div class="progress-step active" data-step="1"><div class="ps-circle">1</div><div class="ps-label">Student</div></div>
+        <div class="progress-step" data-step="2"><div class="ps-circle">2</div><div class="ps-label">Guardian</div></div>
+        <div class="progress-step" data-step="3"><div class="ps-circle">3</div><div class="ps-label">Documents</div></div>
+        <div class="progress-step" data-step="4"><div class="ps-circle">4</div><div class="ps-label">Review</div></div>
+      </div>
+
+      <!-- WIZARD CARD -->
+      <div class="wiz-card" id="wizCard">
+
+        <!-- STEP 1: STUDENT INFO -->
+        <div class="wiz-step active" data-step="1">
+          <h2>Student Information</h2>
+          <p class="wiz-sub">Tell us about the applicant.</p>
+
+          <label style="display:block;font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:14px;">Applying for</label>
+          <div class="entry-toggle" id="entryToggle">
+            <label class="entry-opt selected" data-val="form1">
+              <input type="radio" name="entryType" value="form1" checked>
+              <div class="eo-title">Form One</div>
+              <div class="eo-sub">New secondary entry, via EMAP</div>
+            </label>
+            <label class="entry-opt" data-val="lower6">
+              <input type="radio" name="entryType" value="lower6">
+              <div class="eo-title">Lower Six</div>
+              <div class="eo-sub">A-Level entry, Mission Fund applies</div>
+            </label>
+          </div>
+
+          <div class="field-row">
+            <div class="field"><label for="s-firstname">Student First Name</label><input type="text" id="s-firstname" required></div>
+            <div class="field"><label for="s-lastname">Student Surname</label><input type="text" id="s-lastname" required></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="s-dob">Date of Birth</label><input type="date" id="s-dob" required></div>
+            <div class="field"><label for="s-gender">Gender</label>
+              <select id="s-gender" required><option value="">Select...</option><option>Female</option><option>Male</option></select>
+            </div>
+          </div>
+          <div class="field" id="prevSchoolField">
+            <label for="s-prevschool">Previous School Attended</label>
+            <input type="text" id="s-prevschool" placeholder="e.g. Nyanga Primary School">
+          </div>
+          <div class="field" id="oLevelField" style="display:none;">
+            <label for="s-olevel">O-Level Subjects & Grades</label>
+            <textarea id="s-olevel" placeholder="List subjects and grades obtained, e.g. Mathematics - B, English - A..."></textarea>
+          </div>
+        </div>
+
+        <!-- STEP 2: GUARDIAN INFO -->
+        <div class="wiz-step" data-step="2">
+          <h2>Parent / Guardian Information</h2>
+          <p class="wiz-sub">Primary contact for correspondence and the parent contract.</p>
+
+          <div class="field-row">
+            <div class="field"><label for="g-name">Full Name</label><input type="text" id="g-name" required></div>
+            <div class="field"><label for="g-relation">Relationship to Student</label>
+              <select id="g-relation" required><option value="">Select...</option><option>Mother</option><option>Father</option><option>Legal Guardian</option><option>Other</option></select>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="g-phone">Phone Number</label><input type="tel" id="g-phone" placeholder="07XX XXX XXX" required></div>
+            <div class="field"><label for="g-email">Email Address</label><input type="email" id="g-email"></div>
+          </div>
+          <div class="field"><label for="g-address">Home Address</label><textarea id="g-address" required></textarea></div>
+          <div class="field"><label for="g-minister">Minister of Religion (Name & Parish)</label>
+            <input type="text" id="g-minister" placeholder="For the required Letter of Affiliation">
+            <div class="hint">A letter from this minister confirming the family's church affiliation is required at submission of physical documents.</div>
+          </div>
+        </div>
+
+        <!-- STEP 3: DOCUMENTS -->
+        <div class="wiz-step" data-step="3">
+          <h2>Required Documents</h2>
+          <p class="wiz-sub">Upload clear photos or scans. You can also bring originals to the school office if it's easier.</p>
+
+          <div class="doc-grid" id="docGrid">
+            <div class="doc-item required" data-doc="birth">
+              <div class="doc-info">
+                <div class="doc-icon">📄</div>
+                <div><div class="doc-name">Birth Certificate<span class="req-tag">*</span></div><div class="doc-status">Certified copy required</div></div>
+              </div>
+              <label class="doc-upload-btn">Upload<input type="file" class="file-input" accept="image/*,.pdf" data-doc="birth"></label>
+            </div>
+            <div class="doc-item required" data-doc="id">
+              <div class="doc-info">
+                <div class="doc-icon">🪪</div>
+                <div><div class="doc-name">National ID<span class="req-tag">*</span></div><div class="doc-status">Student's or guardian's, if student has none</div></div>
+              </div>
+              <label class="doc-upload-btn">Upload<input type="file" class="file-input" accept="image/*,.pdf" data-doc="id"></label>
+            </div>
+            <div class="doc-item" data-doc="olevel" id="olevelDoc" style="display:none;">
+              <div class="doc-info">
+                <div class="doc-icon">📊</div>
+                <div><div class="doc-name">O-Level Results<span class="req-tag">*</span></div><div class="doc-status">Required for Lower Six applicants</div></div>
+              </div>
+              <label class="doc-upload-btn">Upload<input type="file" class="file-input" accept="image/*,.pdf" data-doc="olevel"></label>
+            </div>
+            <div class="doc-item" data-doc="baptism">
+              <div class="doc-info">
+                <div class="doc-icon">✝️</div>
+                <div><div class="doc-name">Baptism Certificate</div><div class="doc-status">If available</div></div>
+              </div>
+              <label class="doc-upload-btn">Upload<input type="file" class="file-input" accept="image/*,.pdf" data-doc="baptism"></label>
+            </div>
+            <div class="doc-item" data-doc="confirmation">
+              <div class="doc-info">
+                <div class="doc-icon">✝️</div>
+                <div><div class="doc-name">Confirmation Certificate</div><div class="doc-status">If available</div></div>
+              </div>
+              <label class="doc-upload-btn">Upload<input type="file" class="file-input" accept="image/*,.pdf" data-doc="confirmation"></label>
+            </div>
+            <div class="doc-item" data-doc="photo">
+              <div class="doc-info">
+                <div class="doc-icon">📷</div>
+                <div><div class="doc-name">Passport Photo</div><div class="doc-status">Recent, plain background</div></div>
+              </div>
+              <label class="doc-upload-btn">Upload<input type="file" class="file-input" accept="image/*" data-doc="photo"></label>
+            </div>
+          </div>
+
+          <p class="hint" style="margin-top:20px;">The Parent Contract, Indemnity Form, and Letter from a Minister of Religion are completed or collected at the school office and are not uploaded here.</p>
+        </div>
+
+        <!-- STEP 4: REVIEW -->
+        <div class="wiz-step" data-step="4">
+          <h2>Review Your Application</h2>
+          <p class="wiz-sub">Check everything below before submitting.</p>
+
+          <div class="review-section">
+            <h4>Student</h4>
+            <div class="review-grid">
+              <div class="review-item"><div class="rl">Applying For</div><div class="rv" id="rev-entry">—</div></div>
+              <div class="review-item"><div class="rl">Full Name</div><div class="rv" id="rev-name">—</div></div>
+              <div class="review-item"><div class="rl">Date of Birth</div><div class="rv" id="rev-dob">—</div></div>
+              <div class="review-item"><div class="rl">Gender</div><div class="rv" id="rev-gender">—</div></div>
+            </div>
+          </div>
+
+          <div class="review-section">
+            <h4>Guardian</h4>
+            <div class="review-grid">
+              <div class="review-item"><div class="rl">Full Name</div><div class="rv" id="rev-gname">—</div></div>
+              <div class="review-item"><div class="rl">Phone</div><div class="rv" id="rev-gphone">—</div></div>
+            </div>
+          </div>
+
+          <div class="review-section">
+            <h4>Documents Uploaded</h4>
+            <div class="review-grid" id="rev-docs"><div class="review-item"><div class="rv">No documents uploaded yet</div></div></div>
+          </div>
+
+          <div class="consent-row">
+            <input type="checkbox" id="consentCheck" required>
+            <label for="consentCheck">I confirm the information provided is accurate, and I understand that admission is subject to the school's verification of documents and, for Form One, EMAP confirmation. I understand the Mission Fund Fee and required physical documents must still be submitted to the school office.</label>
+          </div>
+        </div>
+
+        <!-- NAV BUTTONS -->
+        <div class="wiz-nav">
+          <button class="wiz-btn wiz-btn-back" id="backBtn" disabled>← Back</button>
+          <button class="wiz-btn wiz-btn-next" id="nextBtn">Continue →</button>
+          <button class="wiz-btn wiz-btn-submit" id="submitBtn" style="display:none;">Submit Application</button>
+        </div>
+      </div>
+
+      <!-- CONFIRMATION SCREEN -->
+      <div class="wiz-card confirm-screen" id="confirmScreen">
+        <div class="confirm-icon">✓</div>
+        <h2>Application Received</h2>
+        <p>Thank you for applying to St. Mary Magdalene's High School. Your reference number is below — please keep it for follow-up enquiries with the admissions office.</p>
+        <div class="confirm-ref" id="confirmRef">SMM-2026-0000</div>
+        <p class="confirm-note">A member of our admissions team will contact your guardian's phone number within 5–7 working days. Please bring your Parent Contract, Indemnity Form, Letter from your Minister of Religion, and Mission Fund payment (Lower Six only) to the school office to complete enrollment.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-row"><img src="images/crest.jpg" alt="School Crest"><span>St. Mary Magdalene's</span></div>
+        <p>P.O. Box 2005, Nyanga, Manicaland, Zimbabwe. Anglican co-educational boarding school in the Diocese of Manicaland. Founded 1948.</p>
+      </div>
+      <div class="footer-col"><h5>Explore</h5><a href="about.html">About Us</a><a href="teachers.html">Teachers</a><a href="news.html">News</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Contact</h5><a href="tel:+263774422205">Principal: 0774 422 205</a><a href="tel:+263773538917">Head: 0773 538 917</a><a href="tel:+263298518">Office: +263 298 8 518</a></div>
+      <div class="footer-col"><h5>Motto</h5><p style="font-family:var(--display);font-style:italic;font-size:17px;color:rgba(247,243,236,0.85);">In Veritate Libertas</p><p style="font-size:13px;margin-top:6px;">"In Truth, Freedom"</p></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 St. Mary Magdalene's High School, Nyanga.</span><span>Site by BFSENTAIN Technologies (Pvt) Ltd</span></div>
+  </div>
+</footer>
+
+<script>
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// ===== WIZARD STATE =====
+let currentStep = 1;
+const totalSteps = 4;
+let entryType = 'form1';
+const uploadedDocs = {};
+
+const progressSteps = document.querySelectorAll('.progress-step');
+const progressFill = document.getElementById('progressFill');
+const wizSteps = document.querySelectorAll('.wiz-step');
+const backBtn = document.getElementById('backBtn');
+const nextBtn = document.getElementById('nextBtn');
+const submitBtn = document.getElementById('submitBtn');
+const wizCard = document.getElementById('wizCard');
+const confirmScreen = document.getElementById('confirmScreen');
+
+function updateProgress(){
+  progressFill.style.width = ((currentStep - 1) / (totalSteps - 1) * 100) + '%';
+  progressSteps.forEach(step => {
+    const n = parseInt(step.getAttribute('data-step'));
+    step.classList.remove('active','done');
+    if(n === currentStep) step.classList.add('active');
+    else if(n < currentStep) step.classList.add('done');
+  });
+}
+
+function showStep(n){
+  wizSteps.forEach(s => s.classList.toggle('active', parseInt(s.getAttribute('data-step')) === n));
+  backBtn.disabled = (n === 1);
+  nextBtn.style.display = (n === totalSteps) ? 'none' : 'inline-block';
+  submitBtn.style.display = (n === totalSteps) ? 'inline-block' : 'none';
+  if(n === totalSteps) populateReview();
+  updateProgress();
+  wizCard.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function validateStep(n){
+  if(n === 1){
+    const required = ['s-firstname','s-lastname','s-dob','s-gender'];
+    for(const id of required){
+      const el = document.getElementById(id);
+      if(!el.value){ el.focus(); return false; }
+    }
+    if(entryType === 'lower6' && !document.getElementById('s-olevel').value.trim()){
+      document.getElementById('s-olevel').focus();
+      return false;
+    }
+  }
+  if(n === 2){
+    const required = ['g-name','g-relation','g-phone','g-address'];
+    for(const id of required){
+      const el = document.getElementById(id);
+      if(!el.value){ el.focus(); return false; }
+    }
+  }
+  if(n === 3){
+    if(!uploadedDocs['birth'] || !uploadedDocs['id']){
+      alert('Birth Certificate and National ID are required before continuing.');
+      return false;
+    }
+    if(entryType === 'lower6' && !uploadedDocs['olevel']){
+      alert('O-Level Results are required for Lower Six applicants.');
+      return false;
+    }
+  }
+  return true;
+}
+
+backBtn.addEventListener('click', () => {
+  if(currentStep > 1){ currentStep--; showStep(currentStep); }
+});
+nextBtn.addEventListener('click', () => {
+  if(!validateStep(currentStep)) return;
+  if(currentStep < totalSteps){ currentStep++; showStep(currentStep); }
+});
+
+// entry type toggle
+document.querySelectorAll('.entry-opt').forEach(opt => {
+  opt.addEventListener('click', () => {
+    document.querySelectorAll('.entry-opt').forEach(o => o.classList.remove('selected'));
+    opt.classList.add('selected');
+    opt.querySelector('input').checked = true;
+    entryType = opt.getAttribute('data-val');
+    const isLower6 = entryType === 'lower6';
+    document.getElementById('oLevelField').style.display = isLower6 ? 'block' : 'none';
+    document.getElementById('olevelDoc').style.display = isLower6 ? 'flex' : 'none';
+    document.getElementById('prevSchoolField').querySelector('label').textContent =
+      isLower6 ? 'Previous School Attended (O-Level)' : 'Previous School Attended';
+  });
+});
+
+// file upload handling (client-side only, no backend yet)
+document.querySelectorAll('.file-input').forEach(input => {
+  input.addEventListener('change', (e) => {
+    const docKey = input.getAttribute('data-doc');
+    const file = e.target.files[0];
+    const item = document.querySelector(`.doc-item[data-doc="${docKey}"]`);
+    if(file){
+      uploadedDocs[docKey] = file.name;
+      item.classList.add('uploaded');
+      item.querySelector('.doc-status').textContent = file.name.length > 28 ? file.name.slice(0,25) + '...' : file.name;
+      item.querySelector('.doc-upload-btn').textContent = '✓ Uploaded';
+      item.querySelector('.doc-icon').textContent = '✓';
+    }
+  });
+});
+
+function populateReview(){
+  document.getElementById('rev-entry').textContent = entryType === 'lower6' ? 'Lower Six (A-Level)' : 'Form One';
+  const fn = document.getElementById('s-firstname').value;
+  const ln = document.getElementById('s-lastname').value;
+  document.getElementById('rev-name').textContent = (fn + ' ' + ln).trim() || '—';
+  document.getElementById('rev-dob').textContent = document.getElementById('s-dob').value || '—';
+  document.getElementById('rev-gender').textContent = document.getElementById('s-gender').value || '—';
+  document.getElementById('rev-gname').textContent = document.getElementById('g-name').value || '—';
+  document.getElementById('rev-gphone').textContent = document.getElementById('g-phone').value || '—';
+
+  const revDocs = document.getElementById('rev-docs');
+  const docLabels = {birth:'Birth Certificate', id:'National ID', olevel:'O-Level Results', baptism:'Baptism Certificate', confirmation:'Confirmation Certificate', photo:'Passport Photo'};
+  const keys = Object.keys(uploadedDocs);
+  if(keys.length === 0){
+    revDocs.innerHTML = '<div class="review-item"><div class="rv">No documents uploaded yet</div></div>';
+  } else {
+    revDocs.innerHTML = keys.map(k => `<div class="review-item"><div class="rl">${docLabels[k] || k}</div><div class="rv">✓ ${uploadedDocs[k]}</div></div>`).join('');
+  }
+}
+
+submitBtn.addEventListener('click', () => {
+  if(!document.getElementById('consentCheck').checked){
+    alert('Please confirm the declaration before submitting.');
+    return;
+  }
+  const ref = 'SMM-2026-' + Math.floor(1000 + Math.random()*9000);
+  document.getElementById('confirmRef').textContent = ref;
+  wizCard.style.display = 'none';
+  document.getElementById('progressTrack').style.display = 'none';
+  confirmScreen.classList.add('active');
+  confirmScreen.scrollIntoView({behavior:'smooth', block:'start'});
+});
+
+updateProgress();
+</script>
+</body>
+</html>
